@@ -17,7 +17,8 @@
     in
       pkgs.mkShell {
         packages = with pkgs; [
-          docker_29 # Containerization tool
+					miktex # Modern TeX distribution
+					biber # Backend for BibLaTeX
         ];
 
         shellHook = ''
