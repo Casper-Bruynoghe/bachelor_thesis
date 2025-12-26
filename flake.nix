@@ -19,6 +19,7 @@
         packages = with pkgs; [
 					texliveFull # TeX Live environment
 					biber # Backend for BibLaTeX
+					zathura # PDF viewer
         ];
 
         shellHook = ''
