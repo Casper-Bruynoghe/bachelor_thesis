@@ -17,7 +17,7 @@
     in
       pkgs.mkShell {
         packages = with pkgs; [
-					miktex # Modern TeX distribution
+					texliveFull # TeX Live environment
 					biber # Backend for BibLaTeX
         ];
 
