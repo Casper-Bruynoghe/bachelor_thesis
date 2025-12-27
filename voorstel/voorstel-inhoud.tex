@@ -1,36 +1,20 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Introduction}
 \label{sec:introduction}
-
-% Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
-% 
-% \begin{itemize}
-%   \item kaderen thema
-%   \item de doelgroep
-%   \item de probleemstelling en (centrale) onderzoeksvraag
-%   \item de onderzoeksdoelstelling
-% \end{itemize}
-% 
-% Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. 
-% Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-% 
-% De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, 
-% een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-% 
-% Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-% 
-% Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots 
-% Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
-
+% TODO: concrete research question
 When starting an IMS subsystem there are three types provided by IBM: Warm start, Cold start, and Emergency restart. Within KBC the Automation team (subteam within Mainframe Infrastructure) 
 has provided uniform start and stop procedures for a multitude of situations. A couple of specialized procedures have also been developed, that cannot be found in the IBM manuals. 
 Therefore a distinction has to be made between what IBM has provided — the three types of start-up procedures described above — and what has been built into KBC via Automation. 
-Each procedure is based on starting up the IMS (sub)system, but additional checks, commands, and follow-up steps are also performed, such as starting up regions, starting up IMS connections, etc.\\
+Each procedure is based on starting up the IMS (sub)system, but additional checks, commands, and follow-up steps are also performed, such as starting up regions, starting up IMS connections, etc. \\
 
 The IMS Infra team is responsible for managing the start (and stop) and this is based on a level structure. Each level has a unique number and performs a specific task at startup. 
 Each level is functionally the same across the various IMS systems on each platform, but there may be differences in implementation because the systems are not set up uniformly. 
-It is also the case that not every level is provided in every IMS system, which is why each IMS system has its own startup (and shutdown) dataset with the defined levels. 
+It is also the case that not every level is provided in every IMS system, which is why each IMS system has its own startup (and shutdown) dataset with the defined levels. \\
 
+Automation will read and interpret this data and execute the corresponding code according to the instructions of the IMS team. The code behind each level is therefore managed entirely by Automation. 
+The bachelor's thesis will consist of going through all existing levels and checking whether the corresponding code in Automation is still in line with the requirements for that level. 
+Are all actions still relevant? Can unnecessary WAITS in the code be eliminated? Are other optimizations possible? The goal is to make the start and stop procedures more efficient and to shorten the turnaround times 
+of the various flows. For each level, it must also be clearly described which actions are performed. To this end, the existing documentation can be used as a basis. \\
 
 %---------- Stand van zaken ---------------------------------------------------
 
