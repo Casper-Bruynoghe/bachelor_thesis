@@ -21,15 +21,15 @@ van de verschillende flows te verkorten. Voor elk niveau moet ook duidelijk word
 \section{Literatuurstudie}
 \label{sec:literatuurstudie}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+% Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+% 
+% Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+% 
+% Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+% 
+% Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+% 
+% Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -38,7 +38,22 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+\textcite{malaika1994tale} states that IMS didn't have the performance nor fault tollerence needed for banking applications, particularly credit/debit transactions, which still are the most frequent transactions in these environments.
+So two extensions were made: Fast Path and XRF (Extended Restart Facility).\\
+
+\textcite{long2000ims} explains that there are two types of Fast Path online transactions.
+\begin{itemize}
+	\item \emph{Exclusive}: A load balancing group (LBG) is associated with each input message. A LBG is ready for balanced processing by one or more Fast Path programs. One LBG exists for each unique Fast Path message-driven application program.
+	\item \emph{Potential}: These transactions are a mixture between standard IMS Full Function and Fast Path exclusive transactions. An exit is used to determine which instance is required for the message.
+\end{itemize}
+It also illustrates that XRF increases the availability of IMS systems. This is achieved by running a second IMS system on a seperate image, located on different physical machines. This is not a perfecct solution 
+for everything as it comes with a couple downsides such as, not being able to protect against application errors or network outages.\\
+
+The importance of high performance, high reliability systems is hammered home by \textcite{alex2012transaction}, where it is stated that these workloads are the most critical workloads run by an IT company.
+A quote from Marriott International, mentioned in the book, estimates that the cost of their reservation system being unavailable would be three thousand dollars per second.
+This is further enforced by \textcite{klein2011introduction}, which specifies that 90\% of the top worldwide companies in a large number of fields use IMS as their transaction management system. However these numbers are from 2011.
+
+
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
