@@ -37,21 +37,23 @@ van de verschillende flows te verkorten. Voor elk niveau moet ook duidelijk word
 % \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
+\textcite{malaika1994tale} stelt dat IMS niet de prestaties en fouttolerantie had die nodig zijn voor banktoepassingen, met name krediet-/debet transacties, die nog steeds de meest voorkomende transacties zijn in deze omgevingen.
+Er werden dus twee uitbreidingen gemaakt: Fast Path en XRF (Extended Restart Facility).\\
 
-\textcite{malaika1994tale} states that IMS didn't have the performance nor fault tollerence needed for banking applications, particularly credit/debit transactions, which still are the most frequent transactions in these environments.
-So two extensions were made: Fast Path and XRF (Extended Restart Facility).\\
-
-\textcite{long2000ims} explains that there are two types of Fast Path online transactions.
+\textcite{long2000ims} legt uit dat er twee soorten Fast Path-onlinetransacties zijn.
 \begin{itemize}
-	\item \emph{Exclusive}: A load balancing group (LBG) is associated with each input message. A LBG is ready for balanced processing by one or more Fast Path programs. One LBG exists for each unique Fast Path message-driven application program.
-	\item \emph{Potential}: These transactions are a mixture between standard IMS Full Function and Fast Path exclusive transactions. An exit is used to determine which instance is required for the message.
+	\item \emph{Exclusief}: Aan elk invoerbericht is een load balancing group (LBG) gekoppeld. Een LBG is klaar voor evenwichtige verwerking door een of meer Fast Path-programma's. Er bestaat één LBG voor elk uniek Fast Path berichtgestuurd applicatieprogramma.
+	\item \emph{Potentieel}: Deze transacties zijn een combinatie van standaard IMS Full Function- en Fast Path-exclusieve transacties. Een exit wordt gebruikt om te bepalen welke instantie vereist is voor het bericht.
 \end{itemize}
-It also illustrates that XRF increases the availability of IMS systems. This is achieved by running a second IMS system on a seperate image, located on different physical machines. This is not a perfecct solution 
-for everything as it comes with a couple downsides such as, not being able to protect against application errors or network outages.\\
+Het illustreert ook dat XRF de beschikbaarheid van IMS-systemen vergroot. Dit wordt bereikt door een tweede IMS-systeem te draaien op een afzonderlijke image, die zich op verschillende fysieke machines bevindt. Dit is geen perfecte oplossing 
+voor alles, omdat het een aantal nadelen heeft, zoals het feit dat het geen bescherming biedt tegen applicatiefouten of netwerkstoringen.\\
 
-The importance of high performance, high reliability systems is hammered home by \textcite{alex2012transaction}, where it is stated that these workloads are the most critical workloads run by an IT company.
-A quote from Marriott International, mentioned in the book, estimates that the cost of their reservation system being unavailable would be three thousand dollars per second.
-This is further enforced by \textcite{klein2011introduction}, which specifies that 90\% of the top worldwide companies in a large number of fields use IMS as their transaction management system. However these numbers are from 2011.
+Het belang van hoogwaardige, uiterst betrouwbare systemen wordt benadrukt door \textcite{alex2012transaction}, waarin wordt gesteld dat deze workloads de meest kritieke workloads zijn die door een IT-bedrijf worden uitgevoerd.
+Een citaat van Marriott International, dat in het boek wordt genoemd, schat dat de kosten van het niet beschikbaar zijn van hun reserveringssysteem drieduizend dollar per seconde zouden bedragen.
+Dit wordt verder onderstreept door \textcite{klein2011introduction}, waarin wordt gespecificeerd dat 90\% van de wereldwijde topbedrijven in een groot aantal sectoren IMS gebruiken als hun transactiebeheersysteem. Deze cijfers zijn echter afkomstig uit 2011.
+
+
+
 
 
 
