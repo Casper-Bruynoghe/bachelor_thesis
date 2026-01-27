@@ -1,7 +1,7 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Inleiding}
 \label{sec:inleiding}
-% TODO: concrete research question
+In dit onderzoek wordt er specifiek gekeken naar het IMS subsysteem van de retail binnen KBC. Dit dient als een zien als een test omgeving voordat het kan uitgerold worden naar de rest van de IMS subsystemen.
 Bij het opstarten van een IMS-subsysteem zijn er drie soorten die door IBM worden aangeboden: \emph{Warm start}, \emph{Cold start} en \emph{Emergency restart}. Binnen KBC heeft het Automation-team 
 (subteam binnen Mainframe infrastructuur) uniforme start- en stopprocedures voorzien voor een groot aantal situaties. Er zijn ook een aantal gespecialiseerde procedures ontwikkeld die niet in de IBM-handleidingen te vinden zijn. 
 Er moet dus een onderscheid worden gemaakt tussen wat IBM heeft voorzien – de drie hierboven beschreven soorten opstartprocedures – en wat via Automation in KBC is ingebouwd. 
@@ -16,6 +16,8 @@ Deze bachelorproef bestaat uit het doorlopen van alle bestaande niveaus en het c
 Zijn alle acties nog steeds relevant? Kunnen onnodige WAITS in de code worden verwijderd? Zijn er andere optimalisaties mogelijk? Het doel is om de start- en stopprocedures efficiënter te maken en de doorlooptijden 
 van de verschillende flows te verkorten. Voor elk niveau moet ook duidelijk worden beschreven welke acties worden uitgevoerd. Hiervoor kan de bestaande documentatie als basis worden gebruikt.\\
 
+Als laatste heeft het onderzoek ook het doel om grondige documentatie te creëren over elke stap van de start- of stopprocedures en mogelijke optimalisaties dat geidentificeerd werden, zodat hiermee verder kan gewerkt worden
+voor de rest van de IMS subsystemen.
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}
@@ -70,9 +72,11 @@ Dit wordt verder onderstreept door \textcite{klein2011introduction}, waarin word
 
 \subsection{Overzicht creëren van huidige infrastructuur}
 Er zal grondig onderzoek worden gedaan naar de staat van de huidige infrastructuur. Dit zal een goed overzicht geven van de zwakke punten en mogelijke verbeterpunten.
-Het is van groot belang dat het bekend is \textcolor{red}{hoe de verschillende systemen met elkaar communiceren, of de kennis over elk stuk software nog binnen het bedrijf aanwezig is en wanneer iemand er voor het laatst mee heeft gewerkt.}
+Het is van groot belang dat het bekend is \textcolor{red}{hoe de verschillende systemen met elkaar communiceren, of de kennis over elk stuk software nog binnen het bedrijf 
+aanwezig is en wanneer iemand er voor het laatst mee heeft gewerkt.}
 
 \subsection{Verzamelen van vereisten}
+\textcolor{green}{Stel de subvraag over welke metrics er nodig zijn om de performantie te evaluaren}
 Voordat deze fase van start kan gaan moet er duidelijkheid zijn over de vereisten voor een haalbare oplossing. Om dit te bereiken, zal het onderzoek het probleem opsplitsen en alle vereisten verzamelen.\\
 
 Eerst zal er een uitgebreide vergadering plaatsvinden met de betreffende medewerkers van KBC, waar de vereisten zullen worden besproken en eventueel gerangschikt van meest belangrijk naar minst belangrijk.\\
@@ -84,7 +88,8 @@ Ten tweede zal op basis van de resultaten van de eerste stap een fase volgen waa
 \end{itemize}
 
 Ten slotte wordt er een uitgebreide lijst opgesteld met alle vereisten waaraan de oplossing moet voldoen om als geschikt te worden beschouwd. Deze lijst wordt opgesteld volgens 
-de \href{https://en.wikipedia.org/wiki/MoSCoW_method}{MoSCoW} methode.
+de \href{https://en.wikipedia.org/wiki/MoSCoW_method}{MoSCoW} methode, zodat er prioriteit kan worden aangegeven aan elke vereiste. Dit zorgt er voor dat het duidelijk is waar de meeste focus moet gelegd worden
+tijdens het onderzoek.
 
 \subsection{Literatuurstudie}
 In deze fase van het onderzoek zal een literatuuronderzoek worden uitgevoerd om inzicht te krijgen in wat er al bekend en vastgesteld is over het onderwerp. 
@@ -110,6 +115,8 @@ Er zal een proof-of-concept (PoC) worden gemaakt met de geselecteerde wijziginge
 Dit zal vervolgens worden voorgelegd aan het automatiseringsteam om feedback te verzamelen. Deze PoC zal worden geleverd met gegevens die verbeteringen ten opzichte van de vorige versie en in vergelijking met het huidige systeem aantonen.\\
 
 De PoC zal verschillende iteraties doorlopen voordat er een geschikte oplossing wordt gevonden die kan worden geïmplementeerd.
+
+successcriteria: meets requirements and is maintainable for a long time.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}
