@@ -79,7 +79,12 @@ Het is van groot belang dat het bekend is hoe de verschillende systemen met elka
 aanwezig is en wanneer iemand er voor het laatst mee heeft gewerkt.
 
 \subsection{Verzamelen van vereisten}
-\textcolor{green}{Stel de subvraag over welke metrics er nodig zijn om de performantie te evaluaren}
+In deze fase is het belangrijk om volgende vragen te kunnen beantwoorden:
+\begin{itemize}
+	\item \textcolor{red}{Welke statistieken moeten worden bekeken worden om de performantie te evalueren?}
+	\item \textcolor{red}{Welke monitoring tools zijn er aanwezig om de performantie van de start en stop procedures te analyseren?}
+\end{itemize}
+
 Voordat deze fase van start kan gaan moet er duidelijkheid zijn over de vereisten voor een haalbare oplossing. Om dit te bereiken, zal het onderzoek het probleem opsplitsen en alle vereisten verzamelen.\\
 
 Eerst zal er een uitgebreide vergadering plaatsvinden met de betreffende medewerkers van KBC, waar de vereisten zullen worden besproken en eventueel gerangschikt van meest belangrijk naar minst belangrijk.\\
@@ -95,14 +100,25 @@ de \href{https://en.wikipedia.org/wiki/MoSCoW_method}{MoSCoW} methode, zodat er 
 tijdens het onderzoek.
 
 \subsection{Literatuurstudie}
-In deze fase van het onderzoek zal een literatuuronderzoek worden uitgevoerd om inzicht te krijgen in wat er al bekend en vastgesteld is over het onderwerp. 
-Dit omvat een overzicht van de belangrijkste concepten en bestaande technologieën. Er zal ook een uitgebreid onderzoek van de interne documentatie worden uitgevoerd om inzicht te krijgen in de huidige infrastructuur. 
-Deze technologieën en technieken zullen worden geanalyseerd om de projectvereisten duidelijker te definiëren en een duidelijker beeld te geven van de uiteindelijke oplossing. 
+In deze fase van het onderzoek zal een literatuuronderzoek worden uitgebreid om inzicht te krijgen in wat er al bekend en vastgesteld is over het onderwerp. 
+Dit omvat een overzicht van de belangrijkste concepten en bestaande technologieën. Deze technologieën en technieken zullen worden geanalyseerd om de projectvereisten 
+duidelijker te definiëren en een duidelijker beeld te geven van de uiteindelijke oplossing. 
 Uiteindelijk is dit onderzoek bedoeld om ervoor te zorgen dat geen belangrijke onderwerpen of relevante hulpmiddelen over het hoofd worden gezien, 
-zodat het onderzoek kan worden voortgezet met een volledig en gedetailleerd inzicht.
+zodat het onderzoek kan worden voortgezet met een volledig en gedetailleerd inzicht. Deze fase zal de volledige onderzoeksperiode doorlopen.\\
+
+Belangrijke zaken waar er onderzoek naar gedaan moet worden tijdens deze fase zijn:
+\begin{itemize}
+	\item \textcolor{red}{Welke onderhoudsstrategie op lange termijn kan voorkomen dat performanceverlies zich in de toekomst opnieuw voordoet?}
+	\item \textcolor{red}{Welke performantieproblemen worden momenteel waargenomen tijdens het opstarten en afsluiten?}
+	\item \textcolor{red}{Hoe kan dode code, verouderde scripts of ongebruikte onderdelen veilig worden geïdentificeerd en verwijderd?}
+\end{itemize}
 
 \subsection{Volledige lijst}
-Het doel van deze fase is om een lange lijst op te stellen van geïdentificeerde problemen, inefficiënties en knelpunten. Dit geeft een duidelijk overzicht van waar de grootste verbeteringen in de huidige architectuur kunnen worden aangebracht.
+Het doel van deze fase is om een lange lijst op te stellen van geïdentificeerde problemen, inefficiënties en knelpunten.
+Dit geeft een duidelijk overzicht van waar de grootste verbeteringen in de huidige architectuur kunnen worden aangebracht.\\ 
+
+Deze lijst zal opgesteld worden met behulp van de geïdentificeerde vereisten in fase twee van het onderzoek. Hierdoor is het belangrijk dat het verzamelen 
+van de vereisten grondig genoeg wordt uitgevoerd, zodat er niets over het hoofd wordt gezien.
 
 \subsection{Korte lijst}
 De korte lijst wordt samengesteld uit de meest veelbelovende items uit de volledige lijst, opgesteld in de voorgaande stap. De volledige lijst wordt zorgvuldig beoordeeld op basis van de volgende criteria:
@@ -117,9 +133,9 @@ Deze korte lijst wordt vervolgens voorgelegd aan het automatiseringsteam voor fe
 Er zal een proof-of-concept (PoC) worden gemaakt met de geselecteerde wijzigingen uit de korte lijst. Elk van deze wijzigingen zal worden getest volgens de vooraf gedefinieerde vereisten. 
 Dit zal vervolgens worden voorgelegd aan het automatiseringsteam om feedback te verzamelen. Deze PoC zal worden geleverd met gegevens die verbeteringen ten opzichte van de vorige versie en in vergelijking met het huidige systeem aantonen.\\
 
-De PoC zal verschillende iteraties doorlopen voordat er een geschikte oplossing wordt gevonden die kan worden geïmplementeerd.
+De PoC zal verschillende iteraties doorlopen voordat er een geschikte oplossing wordt gevonden die kan worden geïmplementeerd. Hiervoor is het belangrijk om concreet na te denken over 
+\textcolor{red}{hoe de huidige oplossing zich aansluit bij de best practices van IBM en de interne normen van KBC}.
 
-successcriteria: meets requirements and is maintainable for a long time.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}
