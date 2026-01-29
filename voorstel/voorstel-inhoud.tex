@@ -39,9 +39,9 @@ voor de rest van de IMS subsystemen.
 % \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
-\textcite{alex2012transaction} definieert een transactie als een interactie met een informatiesysteem. Enkele voorbeelden hiervan zijn: het bijwerken van een winkelboekhouding, het goedkeuren van een creditcardtransactie of 
-het verwijderen van een artikel uit de winkelvoorraad tijdens het afrekenen. Ook wordt het belang van deze systemen uiteengezet. Als een transactie niet wordt verwerkt, kan dit ertoe leiden dat een klant het dubbele
-van het verschuldigde bedrag in rekening wordt gebracht. \\
+\textcite{alex2012transaction} definieert een transactie als een interactie met een informatiesysteem. Enkele voorbeelden hiervan zijn gegeven door \textcite{alex2012transaction}: het bijwerken van een winkelboekhouding, 
+het goedkeuren van een creditcardtransactie of het verwijderen van een artikel uit de winkelvoorraad tijdens het afrekenen. Ook wordt het belang van deze systemen uiteengezet. 
+Als een transactie niet wordt verwerkt, kan dit ertoe leiden dat een klant het dubbele van het verschuldigde bedrag in rekening wordt gebracht. \\
 
 Het belang van hoogwaardige, uiterst betrouwbare systemen wordt benadrukt door \textcite{alex2012transaction}, waarin wordt gesteld dat deze workloads de meest kritieke workloads zijn die door een IT-bedrijf worden uitgevoerd.
 Een citaat van Marriott International, dat in het boek wordt genoemd, schat dat de kosten van het niet beschikbaar zijn van hun reserveringssysteem drieduizend dollar per seconde zouden bedragen.
@@ -64,6 +64,11 @@ Ten slotte wordt in \textcite{long2000ims} een lijst gegeven van door IBM verstr
 		van onvolledige message processing programs (MPPs) en batch message processing programs (BMPs) worden geblokkeerd. Na deze stap worden de invoerberichten opnieuw in de wachtrij geplaatst en worden 
 		de MPP's opnieuw opgestart en worden de uitvoerberichten opnieuw verzonden. BMPs moeten echter opnieuw worden ingediend om ontbrekende of inconsistente uitvoer te voorkomen.
 	\item Warm start (in \textcite{long2000ims} aangeduid als “normal restart”): om de message queues te behouden, wordt een normale herstart uitgevoerd vanaf een eerdere normale IMS-beëindiging. 
+\end{itemize}
+Het verschil tussen MPPs en BMPs wordt uitgelegd in \textcite{mcgee1977information}:
+\begin{itemize}
+	\item MPPs worden gebruikt om applicaties uit te voeren wanneer er een message binnenkomt. Deze worden voornamelijk gebruikt voor online transacties.
+	\item BMPs daarentegen worden gebruikt om applicaties uit te voeren wanneer er een message binnenkomt. Deze worden voornamelijk gebruikt voor online transacties.
 \end{itemize}
 
 %---------- Methodologie ------------------------------------------------------
