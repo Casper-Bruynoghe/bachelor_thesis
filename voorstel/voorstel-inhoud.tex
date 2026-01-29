@@ -43,11 +43,6 @@ voor de rest van de IMS subsystemen.
 het verwijderen van een artikel uit de winkelvoorraad tijdens het afrekenen. Ook wordt het belang van deze systemen uiteengezet. Als een transactie niet wordt verwerkt, kan dit ertoe leiden dat een klant het dubbele
 van het verschuldigde bedrag in rekening wordt gebracht. \\
 
-\textcite{alex2012transaction}
-\begin{itemize}
-	\item OLTP (online transaction processing) vs batch processing) (p. 10)
-\end{itemize}
-
 Het belang van hoogwaardige, uiterst betrouwbare systemen wordt benadrukt door \textcite{alex2012transaction}, waarin wordt gesteld dat deze workloads de meest kritieke workloads zijn die door een IT-bedrijf worden uitgevoerd.
 Een citaat van Marriott International, dat in het boek wordt genoemd, schat dat de kosten van het niet beschikbaar zijn van hun reserveringssysteem drieduizend dollar per seconde zouden bedragen.
 Dit wordt verder onderstreept door \textcite{klein2011introduction}, waarin wordt gespecificeerd dat 90\% van de wereldwijde topbedrijven in een groot aantal sectoren IMS gebruiken als hun transactiebeheersysteem. 
@@ -62,6 +57,14 @@ Testen is een ander punt dat in dit boek wordt benadrukt. Het is de enige manier
         na elke compilatie. Ze moeten daarom snel kunnen worden uitgevoerd om de ontwikkeling niet te hinderen.
 \end{itemize}\\
 
+Finally, a list of provided IMS startup commands provided by IBM used within KBC are explained in \textcite{long2000ims}:
+\begin{itemize}
+	\item Cold start: this is done the first time the system is started. During this process the message queues, dynamic logs and restart data sets are initialized
+	\item Emergency restart: when a failure occurs IMS will be restarted according to the log active at the time of the failure. This process will black-out the database changes of incomplete message processing programs (MPPs)
+		and batch message processing programs (BMPs). After this step the input messages are re-enqueued and the MPPs are restarted as well as retransmitting the output messages. BMPs must be resubmitted however, this is 
+		to prevent missing or inconsisten output.
+	\item Warm start (referred to as "normal restart" in \textcite{long2000ims}): to preserve the message queues, a normal restart is done from a previous normal IMS termination. 
+\end{itemize}
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
