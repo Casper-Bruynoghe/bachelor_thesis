@@ -57,13 +57,13 @@ Testen is een ander punt dat in dit boek wordt benadrukt. Het is de enige manier
         na elke compilatie. Ze moeten daarom snel kunnen worden uitgevoerd om de ontwikkeling niet te hinderen.
 \end{itemize}\\
 
-Finally, a list of provided IMS startup commands provided by IBM used within KBC are explained in \textcite{long2000ims}:
+Ten slotte wordt in \textcite{long2000ims} een lijst gegeven van door IBM verstrekte IMS-opstartcommando's die binnen KBC worden gebruikt:
 \begin{itemize}
-	\item Cold start: this is done the first time the system is started. During this process the message queues, dynamic logs and restart data sets are initialized
-	\item Emergency restart: when a failure occurs IMS will be restarted according to the log active at the time of the failure. This process will black-out the database changes of incomplete message processing programs (MPPs)
-		and batch message processing programs (BMPs). After this step the input messages are re-enqueued and the MPPs are restarted as well as retransmitting the output messages. BMPs must be resubmitted however, this is 
-		to prevent missing or inconsisten output.
-	\item Warm start (referred to as "normal restart" in \textcite{long2000ims}): to preserve the message queues, a normal restart is done from a previous normal IMS termination. 
+  \item Cold start: dit gebeurt wanneer het systeem voor het eerst wordt opgestart. Tijdens dit proces worden de message queues, dynamische logboeken en herstart datasets geïnitialiseerd
+	\item Emergency restart: wanneer er een storing optreedt, wordt IMS opnieuw opgestart volgens het logboek dat actief was op het moment van de storing. Dit proces zorgt ervoor dat de databasewijzigingen 
+		van onvolledige message processing programs (MPPs) en batch message processing programs (BMPs) worden geblokkeerd. Na deze stap worden de invoerberichten opnieuw in de wachtrij geplaatst en worden 
+		de MPP's opnieuw opgestart en worden de uitvoerberichten opnieuw verzonden. BMPs moeten echter opnieuw worden ingediend om ontbrekende of inconsistente uitvoer te voorkomen.
+	\item Warm start (in \textcite{long2000ims} aangeduid als “normal restart”): om de message queues te behouden, wordt een normale herstart uitgevoerd vanaf een eerdere normale IMS-beëindiging. 
 \end{itemize}
 
 %---------- Methodologie ------------------------------------------------------
