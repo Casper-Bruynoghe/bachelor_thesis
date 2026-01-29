@@ -39,20 +39,20 @@ voor de rest van de IMS subsystemen.
 % \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
-\textcite{malaika1994tale} stelt dat IMS niet de prestaties en fouttolerantie had die nodig zijn voor banktoepassingen, met name krediet-/debet transacties, die nog steeds de meest voorkomende transacties zijn in deze omgevingen.
-Er werden dus twee uitbreidingen gemaakt: Fast Path en XRF (Extended Restart Facility).\\
+\textcite{alex2012transaction} definieert een transactie als een interactie met een informatiesysteem. Enkele voorbeelden hiervan zijn: het bijwerken van een winkelboekhouding, het goedkeuren van een creditcardtransactie of 
+het verwijderen van een artikel uit de winkelvoorraad tijdens het afrekenen. Ook wordt het belang van deze systemen uiteengezet. Als een transactie niet wordt verwerkt, kan dit ertoe leiden dat een klant het dubbele
+van het verschuldigde bedrag in rekening wordt gebracht. Dit is misschien niet kritisch in het grote geheel van het bedrijf, maar het leidt wel tot ontevredenheid bij de klant en er moet tijd worden 
+vrijgemaakt om dit te corrigeren. Als het transactiebeheersysteem echter verantwoordelijk is voor zeer kritieke processen, zoals het leiden van treinen op drukke sporen, kan dit leiden tot een fatale botsing.\\
 
-\textcite{long2000ims} legt uit dat er twee soorten Fast Path-onlinetransacties zijn.
+\textcite{alex2012transaction}
 \begin{itemize}
-	\item \emph{Exclusief}: Aan elk invoerbericht is een load balancing group (LBG) gekoppeld. Een LBG is klaar voor evenwichtige verwerking door een of meer Fast Path-programma's. Er bestaat één LBG voor elk uniek Fast Path berichtgestuurd applicatieprogramma.
-	\item \emph{Potentieel}: Deze transacties zijn een combinatie van standaard IMS Full Function- en Fast Path-exclusieve transacties. Een exit wordt gebruikt om te bepalen welke instantie vereist is voor het bericht.
+	\item OLTP (online transaction processing) vs batch processing) (p. 10)
 \end{itemize}
-Het illustreert ook dat XRF de beschikbaarheid van IMS-systemen vergroot. Dit wordt bereikt door een tweede IMS-systeem te draaien op een afzonderlijke image, die zich op verschillende fysieke machines bevindt. Dit is geen perfecte oplossing 
-voor alles, aangezien het een aantal nadelen heeft, zoals het feit dat het geen bescherming biedt tegen applicatiefouten of netwerkstoringen.\\
 
 Het belang van hoogwaardige, uiterst betrouwbare systemen wordt benadrukt door \textcite{alex2012transaction}, waarin wordt gesteld dat deze workloads de meest kritieke workloads zijn die door een IT-bedrijf worden uitgevoerd.
 Een citaat van Marriott International, dat in het boek wordt genoemd, schat dat de kosten van het niet beschikbaar zijn van hun reserveringssysteem drieduizend dollar per seconde zouden bedragen.
-Dit wordt verder onderstreept door \textcite{klein2011introduction}, waarin wordt gespecificeerd dat 90\% van de wereldwijde topbedrijven in een groot aantal sectoren IMS gebruiken als hun transactiebeheersysteem. Deze cijfers zijn echter afkomstig uit 2011.
+Dit wordt verder onderstreept door \textcite{klein2011introduction}, waarin wordt gespecificeerd dat 90\% van de wereldwijde topbedrijven in een groot aantal sectoren IMS gebruiken als hun transactiebeheersysteem. 
+Deze cijfers zijn echter afkomstig uit 2011.\\
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
