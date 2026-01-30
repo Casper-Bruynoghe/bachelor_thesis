@@ -63,11 +63,19 @@ objecten te evalueren en vervolgens de werkelijke systeemstatus van het object t
 
 Ten slotte wordt in \textcite{long2000ims} een lijst gegeven van door IBM verstrekte IMS-opstartcommando's die binnen KBC worden gebruikt:
 \begin{itemize}
-  \item Cold start: dit gebeurt wanneer het systeem voor het eerst wordt opgestart. Tijdens dit proces worden de message queues, dynamische logboeken en herstart datasets geïnitialiseerd
+	\item Cold start: dit gebeurt wanneer het systeem voor het eerst wordt opgestart. Tijdens dit proces worden de message queues, dynamische logboeken en herstart datasets geïnitialiseerd \autocite{long2000ims}. 
+		\textcite{IMSOperationsAndAutomation} geeft nog twee andere situaties waarbij een IMS systeem een cold start moet ondergaan: nadat de nucleus wordt veranderd tijdens een system definition en na een reallocatie van
+		de shared-message-queue structures als deze messages bevatte.
 	\item Warm start (in \textcite{long2000ims} aangeduid als “normal restart”): om de message queues te behouden, wordt een normale herstart uitgevoerd vanaf een eerdere normale IMS-beëindiging. 
+		Voordat IMS kan gestart worden moet er bepaald worden of IMS de MSDBs (dit zijn de hoofd opslag databases \autocite{long2000ims}) moeten herladen worden, specifieke systeem data sets moeten 
+		worden geformat en/of specifieke security functies moeten worden geactiveerd \autocite{IMSOperationsAndAutomation}.
 	\item Emergency restart: wanneer er een storing optreedt, wordt IMS opnieuw opgestart volgens het logboek dat actief was op het moment van de storing. Dit proces zorgt ervoor dat de databasewijzigingen 
 		van onvolledige message processing programs (MPPs) en batch message processing programs (BMPs) worden geblokkeerd. Na deze stap worden de invoerberichten opnieuw in de wachtrij geplaatst en worden 
-		de MPP's opnieuw opgestart en worden de uitvoerberichten opnieuw verzonden. BMPs moeten echter opnieuw worden ingediend om ontbrekende of inconsistente uitvoer te voorkomen.
+		de MPP's opnieuw opgestart en worden de uitvoerberichten opnieuw verzonden. BMPs moeten echter opnieuw worden ingediend om ontbrekende of inconsistente uitvoer te voorkomen. 
+		\autocite{long2000ims}\\
+
+		Voordat een emergency restart kan worden uitgevoerd, moet er gecontroleerd worden of de systeem datasets opnieuw gealloceerd en geformatteerd moeten worden en/of IMS zijn resources heeft opgekuist \autocite{IMSOperationsAndAutomation}.
+		
 \end{itemize}
 Het verschil tussen MPPs en BMPs wordt uitgelegd in \textcite{mcgee1977information}:
 \begin{itemize}
