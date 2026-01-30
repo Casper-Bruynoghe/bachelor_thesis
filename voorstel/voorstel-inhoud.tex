@@ -1,11 +1,12 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Inleiding}
 \label{sec:inleiding}
-In dit onderzoek wordt er specifiek gekeken naar het IMS subsysteem van de retail binnen KBC. Dit dient als een zien als een test omgeving voordat het kan uitgerold worden naar de rest van de IMS subsystemen.
-Bij het opstarten van een IMS-subsysteem zijn er drie soorten die door IBM worden aangeboden: \emph{Warm start}, \emph{Cold start} en \emph{Emergency restart}. Binnen KBC heeft het Automation-team 
-(subteam binnen Mainframe infrastructuur) uniforme start- en stopprocedures voorzien voor een groot aantal situaties. Er zijn ook een aantal gespecialiseerde procedures ontwikkeld die niet in de IBM-handleidingen te vinden zijn. 
-Er moet dus een onderscheid worden gemaakt tussen wat IBM heeft voorzien – de drie hierboven beschreven soorten opstartprocedures – en wat via Automation in KBC is ingebouwd. 
-Elke procedure is gebaseerd op het opstarten van het IMS-(sub)systeem, maar er worden ook aanvullende controles en commando's uitgevoerd, zoals het opstarten van regio's, het opstarten van IMS-verbindingen, enz.\\
+In dit onderzoek wordt er specifiek gekeken naar het IMS subsysteem van de mobile en touch platformen binnen KBC. De scope van dit onderzoek (en proof-of-concept) beperkt zich tot de test omgeving, de ‘testplex’, 
+waar alles uitgetest wordt vooraleer het uitgerold wordt naar de andere IMS systemen. Bij het opstarten van een IMS-subsysteem zijn er drie soorten die door IBM worden aangeboden: 
+\emph{Warm start}, \emph{Cold start} en \emph{Emergency restart}. Binnen KBC heeft het Automation-team (subteam binnen Mainframe infrastructuur) uniforme start- en stopprocedures voorzien voor een groot aantal situaties. 
+Er zijn ook een aantal gespecialiseerde procedures ontwikkeld die niet in de IBM-handleidingen te vinden zijn. Er moet dus een onderscheid worden gemaakt tussen wat IBM heeft voorzien – de drie hierboven beschreven 
+soorten opstartprocedures – en wat via Automation in KBC is ingebouwd. Elke procedure is gebaseerd op het opstarten van het IMS-(sub)systeem, maar er worden ook aanvullende controles en commando's uitgevoerd, 
+zoals het opstarten van regions, het opstarten van IMS-verbindingen, enz.\\
 
 Het IMS Infra-team is verantwoordelijk voor het beheer van het opstarten (en afsluiten) en dit is gebaseerd op een niveaustructuur. Elk niveau heeft een uniek nummer en voert een specifieke taak uit bij het opstarten. 
 Elk niveau is functioneel hetzelfde in de verschillende IMS-systemen op elk platform, maar er kunnen verschillen zijn in de implementatie omdat de systemen niet uniform zijn opgezet. 
@@ -63,10 +64,10 @@ objecten te evalueren en vervolgens de werkelijke systeemstatus van het object t
 Ten slotte wordt in \textcite{long2000ims} een lijst gegeven van door IBM verstrekte IMS-opstartcommando's die binnen KBC worden gebruikt:
 \begin{itemize}
   \item Cold start: dit gebeurt wanneer het systeem voor het eerst wordt opgestart. Tijdens dit proces worden de message queues, dynamische logboeken en herstart datasets geïnitialiseerd
+	\item Warm start (in \textcite{long2000ims} aangeduid als “normal restart”): om de message queues te behouden, wordt een normale herstart uitgevoerd vanaf een eerdere normale IMS-beëindiging. 
 	\item Emergency restart: wanneer er een storing optreedt, wordt IMS opnieuw opgestart volgens het logboek dat actief was op het moment van de storing. Dit proces zorgt ervoor dat de databasewijzigingen 
 		van onvolledige message processing programs (MPPs) en batch message processing programs (BMPs) worden geblokkeerd. Na deze stap worden de invoerberichten opnieuw in de wachtrij geplaatst en worden 
 		de MPP's opnieuw opgestart en worden de uitvoerberichten opnieuw verzonden. BMPs moeten echter opnieuw worden ingediend om ontbrekende of inconsistente uitvoer te voorkomen.
-	\item Warm start (in \textcite{long2000ims} aangeduid als “normal restart”): om de message queues te behouden, wordt een normale herstart uitgevoerd vanaf een eerdere normale IMS-beëindiging. 
 \end{itemize}
 Het verschil tussen MPPs en BMPs wordt uitgelegd in \textcite{mcgee1977information}:
 \begin{itemize}
